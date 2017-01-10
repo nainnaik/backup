@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>   </head>
+<body> 	
+    <style type="text/css">table {
+    width: 100%;
+    border-spacing: 0.5rem;
+}
+
+th {
+    height: 50px;
+}
+td {
+    padding: 15px;
+}
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}</style>
+
+   <table id="tblPets" style="border: 1px solid blue">
+
+    <tr>
+    <th>Rownum</th>
+    <th>Animal</th>
+    <th>Name</th>
+    <th >Age</th>
+    <th><INPUT TYPE="Button" CLASS="Button" onClick="delRow()" VALUE="Delete Row"></th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Dog</td> 
+      <td>Scooby Doo</td>
+      <td>6</td>
+      <td><input type="button" class="button"></td>
+   </tr>
+
+     <tr>
+      <td>2</td>
+      <td>cat</td> 
+      <td>tom</td>
+      <td>3</td>
+      <td><input type ="button" class="Button"></td>
+   </tr>
+   
+      <p>  
+          <input type="button" onclick="insRow('tblPets')" value ="Add row"> 
+    </p>
+  
+<script> 
+    function insRow(addRows){
+      var rownum= document.getElementById(addRows).insertRow();
+      var number=rownum.insertCell(0);
+      var animal=rownum.insertCell(1);
+      var name=rownum.insertCell(2);
+      var age=rownum.insertCell(3);
+
+      number.innerhtml=" ";      
+      animal.innerHTML = " ";
+      name.innerHTML =" ";
+      age.innerHTML= " ";      
+
+
+    }
+</script>
+
+
+<script>
+ var td5 = document.createElement("TD")
+    var strHtml5 = "<INPUT TYPE=\"Button\" CLASS=\"Button\" onClick=\"delRow()\" VALUE=\"Delete Row\">";
+    td5.innerHTML = strHtml5.replace(/!count!/g,count);
+    // append data to row
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+    row.appendChild(td5);
+    // add to count variable
+    count = parseInt(count) + 1;
+    // append row to table
+    tbody.appendChild(row);
+  }
+  function delRow()
+  {
+    var current = window.event.srcElement;
+    //here we will delete the line
+    while ( (current = current.parentElement)  && current.tagName !="TR");
+         current.parentElement.removeChild(current);
+  }
+
+</script>
+
+</table>
+
+</body>
+
+

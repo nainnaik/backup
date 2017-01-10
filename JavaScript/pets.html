@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head><link href="../petsCss.css" rel= "stylesheet" type ="text/css">   </head>
+<body> 	
+  <style type="text/css">
+      table {
+    width: 100%;
+    border-spacing: 0.5rem;
+}
+
+th {
+    height: 50px;
+}
+td {
+    padding: 15px;
+}
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+  </style>
+
+   <table id="tblPets" style="border: 1px solid blue">
+
+
+    <tr>
+    <th>Rownum</th>
+    <th>Animal</th>
+    <th>Name</th>
+    <th >Age</th>
+    </tr>
+
+    <tr>
+      <td>1</td>
+      <td>Dog</td> 
+      <td>Scooby Doo</td>
+      <td>6</td>
+      
+   </tr>
+
+     <tr>
+      <td>2</td>
+      <td>cat</td> 
+      <td>tom</td>
+      <td>3</td>      
+   </tr>
+
+      <p>  
+          <input type="button" onclick="insRow('tblPets')" value ="Add row">
+      </p>
+      <p>
+          <input type ="button" onclick="delRow('tblPets')" value ="Delete row">
+      </p>
+
+
+</table>
+<script type="text/javascript">
+    function insRow(addRows){
+      var rownum= document.getElementById(addRows).insertRow();
+      var number=rownum.insertCell(0);
+      var animal=rownum.insertCell(1);
+      var name=rownum.insertCell(2);
+      var age=rownum.insertCell(3);
+
+      number.innerhtml=" ";      
+      animal.innerHTML = " ";
+      name.innerHTML =" ";
+      age.innerHTML= " ";      
+
+    }
+</script>
+<script type="text/javascript">
+  
+function delRow() {
+    document.getElementById("tblPets").deleteRow(3);
+}
+
+</script>
+
+
+</body>
+
+
+</html>

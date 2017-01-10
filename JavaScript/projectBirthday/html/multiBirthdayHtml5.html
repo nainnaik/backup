@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+ 
+ <head>
+		<link herf="http://necolas.github.com/normalize.css/">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<title>Memorial365Form &gt; Memorial365 &gt; Memorial365 Table</title>
+		<title>Memorial365 Table</title>
+		<link href="../css/grid.css" rel= "stylesheet" type ="text/css">
+		<link href="../css/birthTable.css" rel= "stylesheet" type ="text/css">
+
+
+		
+		
+ </head>
+
+ <body>
+	<section id="tableImg" class="row" name= "birthdayImg" >
+	   <img class="col-1" src="../img/walkingGifts.jpg" alt="gifts"  width="100%"  height="100%">
+	    <h1 class= "col-10" id= "maultiHead"> Enter Multiple Event</h1>
+	</section>
+  
+    <section>
+      <nav>
+         <ul>          
+          <li> <a href="indexHtml5.html">Go to SignUp page </a></li>
+          <li><a href="indexHtml5Login.html">Go to login Page</a></li>
+          
+         </ul> 
+      </nav>
+    </section>
+
+	<section class="col-10" id= "multiheader1"><h2>Enter multiple Birthdate</h2>
+
+		<form id="enDetail" action="#">
+			Person's Name <input id = "name" placeholder="Name" type ="text" required > 
+			Event Date <input id="eDate" type ="date" placeholder="Event date" required>
+			Mobile <input id="mobile" type ="number" placeholder="Mobile Number" required > 
+			Group Name <input id = "gName" type ="text" placeholder="Enter GroupName" required>
+
+			<input type="submit"  id="addDetails" value="Add and Save" required > 
+		</form>
+    </section>
+
+    <section>
+			<table id ="multidata" style="border: 1px solid black"> 
+				<thead>
+					<tr>
+						 <td >Name</td>
+						 <td >Eventdate</td>
+						 <td > Mobile Number</td>
+						 <td > Group Name</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>		
+	</section>
+ <br>
+ 
+ <section>
+	
+	 <h2 id="multiheader2">HomePage</h2>
+
+    <nav>
+      <ul>
+          
+          <li><a href="indexHtml5.html">Return to home page</a></li>
+          <li><a href=".html"> Add Birthday Details</a></li>
+          
+     </ul> 
+    </nav>
+  </section>
+			
+					
+
+<footer>
+	<h4>&copy; nainjay. All rights reserved.</h4>
+</footer>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//the folowing code will add a roww
+  	$('#addDetails').click(function() {
+      
+     	var toAddName = $("input[id='name']").val();
+     	var toAddeventdt=$("input[id='eDate']").val();
+     	
+     	var toAddMobi=$("input[id='mobile']").val();
+     	var toAddGname=$("input[id='gName']").val();
+     	var newcontent="<tr><td>" + toAddName + "</td><td>" + toAddeventdt + "</td><td>" + toAddMobi + "</td><td>" + toAddGname + "</td><td><input type='submit' class='del'  id='delete' value='delete'> </td></tr>";
+     	
+      
+      	//if any of the field values is blank then do not add 
+    	//if(!(toAddName || toAddeventdt || toAddMobi || toAddGname)) {
+    	 /*f(toAddName !== "" || toAddeventdt !== "" || toAddMobi !== "" || toAddGname !== "") {	
+       		$("tbody:last-child").append(newcontent);}*/
+       
+       //no field values must be blank
+       if(toAddName !== "" && toAddeventdt !== "" && toAddMobi !== "" && toAddGname !== "") {	
+       		$("tbody:last-child").append(newcontent);
+       		  
+       	}	// append end 
+       	 
+       	
+       	// fill background-color in even row
+        	/*$(document).ready(function(){
+                 $("tr:even").css("background-color", "#D4C5AE");
+           });*/
+	
+
+    	// });
+
+    
+  	//this code will delete a row from the table
+         $(document).on('click','.del',function(){
+       		$(this).closest('tr').remove(); 
+
+           }); 
+
+});//end of ready 
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+ 
+</body>
+</html>

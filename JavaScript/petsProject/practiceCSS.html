@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+		<link herf="http://necolas.github.com/normalize.css/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="allGrid.css" rel= "stylesheet" media="screenand(min-width:"400px">
+</head>
+<style >
+	#container{ 
+		width:100%;
+		
+		margin:0 auto;		
+		border-collapse: collapse;	
+		border: 5px dotted green;
+		background-color:pink ;
+
+
+	}
+
+	[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+	#main{
+
+		background-color:;
+	}
+
+	.row{
+		padding:5px 5px 0px 5px;
+		margin:1px;
+		background-color: ;
+
+	}
+    .col-3,.col-m-6 {
+    	float:left;
+
+        background-color:;
+    }
+    .col-6,.col-m-9{
+    	float:right;
+    	background-color:white;
+    	color:black;
+    	position:relative;
+    }
+    .col-9,.col-m-12{
+
+    	background-color: ;
+    	color:black;
+    	text-align: center;
+    	position:relative;
+    }
+    #header{
+    	float: left;
+    	padding: 15px;
+    	background-color:;
+    	color:;
+
+    }
+ ul li{
+
+ 	list-style-type: none;
+     padding: 8px;
+    margin-bottom: 7px;
+    background: purple;
+}
+div.inner{
+	width:65%;
+	margin:0;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+</style>
+<body>
+
+<div id="container">
+ 	<div id = "main">
+
+		<div class="col-12" id="header">
+			<header><h1>Chania</h1></header>
+		</div>
+
+		  <div class="row" >
+				<div class="col-3 col-m-3"  id="nav">
+					<ul id="nav-list">
+						<li>The Flight</li>
+						<li>The City</li>
+						<li>The Island</li>
+						<li>The Food</li>
+					</ul>
+			</div>
+			<div class="col-6 col-m-9" ><div class="inner">
+					<h1>The City</h1>
+					<p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+					<p>Resize the browser window to see how the content respond to the resizing.</p></div>
+	 		</div>
+	 		<div class="col-9 col-m-12"><div class="inner">
+	 	  			<h2> whats is this </h2>
+	 	  			<h2>What?</h2>
+					<p>Chania is a city on the island of Crete.</p>
+								<h2>Where?</h2>
+					<p>Crete is a Greek island in the Mediterranean Sea.</p>
+						<h2>How?</h2>
+					<p>You can reach Chania airport from all over Europe.</p></div>
+			</div> 	
+
+
+
+ 	</div>
+</div>
+
+
+
+
+</body>
+</html>
+

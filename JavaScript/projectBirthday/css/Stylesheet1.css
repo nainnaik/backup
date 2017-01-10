@@ -1,0 +1,109 @@
+*{   border: 1px gray;
+
+} 
+ 
+*{
+
+ -webkit-box-sizing: border-box;
+ -moz-box-sing: border-box;
+ -ms-box-sizing: border-box;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-top:15px;
+ padding-bottom: 15
+
+}
+
+
+img, em, object,video{
+max-width:100%;
+}
+
+
+body{
+ 
+ background-size:100%;
+ font-family: 'Indie-Flower', sans-serif;
+ margin:0 auto;
+ max-width: 100%;
+ padding :10px
+
+}
+.hover{
+color: red;
+}
+
+h1, h3, h4{ 
+  min-width:48px;
+  min-height:48px;
+  font-weight: lighter;
+  font-size: 14px;
+  text-transform:uppercase;
+}
+ h1{
+ 
+  font-size:25px;
+  color: red;
+ }
+ 
+.birthdayImg{
+  width:100% ;
+ background-size:cover;
+ 
+
+}
+
+
+*{
+ font-family: 'Indie-Flower', cursive;
+}
+
+link{
+  color: green;
+}
+
+
+img,embed,object,video{
+max-width: 100%;
+}
+
+
+
+.div {
+    width: 100%;
+    padding: 25px;
+    border: 25px solid navy;
+    margin: 25px;
+}
+
+
+
+
+button{
+ min-width:48px;
+ min-height: 48px;
+}
+
+ 
+.indexImg{
+width:100%;
+background-size:cover;
+}
+.Name {
+    color: green;
+   text-align: left;
+   font-size: 25px;	
+}
+.date{
+	  display: flex;
+    flex-wrap: wrap;
+}
+.h1{ 
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+   text-align:left;
+  
+}
+
+.grname{}

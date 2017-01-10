@@ -1,0 +1,54 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+		<link herf="http://necolas.github.com/normalize.css/">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+ 
+</head>
+<body>
+<div>
+	<header> <h1>Lets do something </h1></header>
+	<div>
+		<div id= "oneDiv">
+		<p id="try"> </p>
+		<p id = "day" > </p>
+		<p>Set the background color of the page to red</p>
+		</div>
+	</div>
+		
+</div>
+
+<script>
+
+document.getElementById("oneDiv").innerHTML = "This is reverse "+  " " + reverseMe(12456879);
+
+function reverseMe(n)
+{
+	
+	 	n = n + "";
+	return n.split("").reverse().join("");
+}
+</script>
+
+<script>
+	var today = new Date() ;
+	var day = today.getDay();
+	var month = today.getMonth();
+	var date = today.getDate();
+
+	var daylist =["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+ 	//"Welcome Today is :" + daylist[day] + date + "/" + month +".";
+
+</script>
+<script>
+//$(document.body).css( "background", "red" );
+ 	$("#oneDiv").css("background-color","green");
+ </script>
+</body>
+</html>

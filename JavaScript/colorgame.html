@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>COLOR GAME</title>
+	<meta charset="UTF-8">
+	<link herf="http://necolas.github.com/normalize.css/">
+
+
+</head>
+
+<body>
+
+<script>
+	var color=["blue","cyan","gold","gray","magneta","orange","red" ,"white","yellow"];
+	var msg;
+	var userInput;
+	var done=false;
+	var target="cyan";
+	
+	console.log(color.sort());	
+	//var target;
+
+	var msg= "please check"
+prompt("i am thinking of one of these color...blue,cyan,gold,gray,magneta,orange,red,white,yellow. What color am i thinking?");
+var nm=prompt("what is your name?");
+	
+function gameRun(){	
+
+	while (!target){
+	msg=prompt("thinking of one of these color...blue,cyan,gold,gray,magneta,orange,red,white,yellow. What color am i thinking?");
+	userInput= parseInt(msg);
+	target=colorGame();
+
+	}
+
+}
+	function colorGame(){
+		if (color=="blue"||color=="gold"||color=="gray"||color=="magneta"||color=="oragne"||color=="red"||color=="white"||color=="yellow"){
+		alert("change it");
+		return false;
+		}
+		if (!color){
+		alert("try again");
+		return false;
+		}
+		if  (!color.sort()){
+		alert("please check alphabetical");
+		return false;
+		}
+		if(color==target)
+		 {
+	 	alert(done);
+	 	return true;
+	 	}
+	}gameRun();
+
+	
+
+	 
+</script>
+</body>
+</html>

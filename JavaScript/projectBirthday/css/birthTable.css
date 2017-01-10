@@ -1,0 +1,137 @@
+body{
+
+  margin:0;
+  padding:55px;
+  background-color:#4EB8BA; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+    
+
+}
+
+header, nav, section, article,footer{
+            border:1px solid purple; 
+            margin:5px;
+            padding:5px;
+
+}
+nav ul {
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            overflow: hidden;
+            background-color:#EBDDD8;
+
+}
+
+nav ul li {
+            display:inline-block; 
+            padding:10px;
+
+}
+
+
+header{
+            color:navy;
+}
+
+a:link {
+  display:block;
+  color:#00FF00 ;
+  text-align: left;
+  padding:4px;  
+  background-color: #EBDDD8;
+}
+
+
+
+a:visited {
+    color: purple;
+    
+}
+
+
+a:hover,a:active {
+    color: #FF00FF;
+    background-color: #77BBD1;
+    
+}
+
+
+a:active {
+    color: #0000FF;
+
+}
+
+
+
+
+h1, h2{ 
+min-width:48px;
+min-height:48px;
+color:black;
+border-spacing: 0.5rem;
+padding:15px;
+margin-left: 25px; 
+text-align: center;
+           
+
+
+}  
+
+form{
+
+  margin-left: 35px;
+  width:100%;
+  
+}
+
+table, th, td ,tbody{
+    border: 1px solid navy;
+
+}
+
+table,tbody {
+   
+   margin: 5px; 
+   width:100%;
+   background-color:#F5EFED ;
+
+
+}
+
+
+th {
+    height: 1px;
+    margin: 3px 5px 3px 5px;
+    text-align: center; 
+   
+
+}
+
+
+td{
+ 	vertical-align: bottom;
+ 	margin: 15px;
+ 	text-align: left;
+  content: 300px;  
+  padding:  5px;
+}
+body{ 
+
+
+      background-color: beige;
+
+
+      }
+
+  
+section {
+          margin:0 auto;
+          padding:25px;              
+        
+          outline: pink dotted thick
+
+      
+         }

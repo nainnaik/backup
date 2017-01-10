@@ -1,0 +1,40 @@
+
+
+			#wrapper{ 
+
+				margin:auto;
+  				padding:25px;
+  				border:5px solid brown;
+  				content:50%; 			    
+ 				background-position: center center;
+  				background-repeat: no-repeat;
+  				background-attachment: scroll;
+  
+			}
+
+	
+
+		    div {
+		     	margin:auto;
+		     	padding:35px;		     	     
+		     	background-color: #4EB8BA;
+		     	outline: #00FF00 dotted thick
+
+		    }
+
+		     h1{
+		     	margin:auto;	     	
+		     	padding:55px;
+		     	text-align: center;
+		     	 
+		     }
+		    p{
+		    	font-family: sans-serif;
+		    	margin:auto;	     	
+		     	padding:15px;
+		     	text-align: left;
+		     	 
+		    	
+		    }
+		    
+

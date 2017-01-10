@@ -1,0 +1,82 @@
+<html>
+<head> 
+	<title>bootstarp practice</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<style type="text/css">
+
+	#leftside,#rightside{
+		
+		width:auto ;
+	}
+	
+	
+	img{
+		height:100px;
+	}
+</style>
+<div class="container-fluid">
+	  <div class="jumbotron">
+	  		<div class="row">
+
+				<div id = "leftside" class="col-xs-5 col-md-6" >
+					<p > Hello Jayesh<img src="http://crunchpics.com/wp-content/uploads/2014/09/old-and-better-cartoon-picture.jpg"/> 	
+				</div>  				
+				
+					
+				<div id ="rightside" class="col-xs-5 col-md-6" >
+			    		<img/>				
+				</div> 
+
+	  		</div>
+		</div>
+
+</div>
+
+
+
+
+<button id= "addAlpha">Click</button> 
+
+<script>
+
+
+$(document).ready(function(){
+
+	
+  				$("#addAlpha").click(function() { 
+
+					var left = document.getElementById("leftside");
+					
+					var cloneAlpha = left.cloneNode(true) ;		
+
+				    $("#rightside").append(cloneAlpha);
+
+				    	   			   
+				});	
+
+
+
+});
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

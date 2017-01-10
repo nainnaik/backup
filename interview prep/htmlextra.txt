@@ -1,0 +1,39 @@
+generic block tag : <p> <div>
+semantic tag : <header>,<nav>,<footer>,<figure>
+BLOCK TAG: 
+containers 
+	<article>, <aside>,<section>,<main>
+<hr>
+<address>
+<blockquote> has cite attribute
+<details> with <summary> 
+
+
+INLINE TAGS
+<span> 
+<cite>
+<abbr>
+<time>
+<code>
+<sub> and <sup>
+
+tags that need javascripts/jquery
+<button>
+<meter>
+<progress>
+<iframe>often used to embed documents
+<bdo>attribute dir(ltr or rtl)
+<map> with <area> creates"clickable element in image"  
+
+
+Web accessibility-------
+visual disabilities:- look for font size , color contrast,fontstyle.
+hearing Disabilities:- use closed caption,
+Motor Disabilities: inability to use a mouse or keyboard, slow response time or limited fine motor skill,
+Dexterity issues: difficulty using their arm or hand,
+Cognitive Disability: learning disabilities,distractibility,dyslexia, inability to remember or focus on large amounts of information
+Adult with ADD/ADHD
+psychological condition: such as TBI & PTSD
+www.webaim.org must put url		
+
+CPanel: need to have the URL for our cPanel account.

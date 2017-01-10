@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ body{margin:0 auto;
+ 		padding:25px;
+ 		
+ }
+ div{
+ 	border-style:solid;
+ 	border-color:green;
+ }
+ h1,h2,h3{
+ 	margin:10px;
+ }
+ ol,ul,p{
+ 	margin:25px;
+ }
+
+</style>
+</head>
+<body>
+	<div>
+		<div>
+		
+			<h1>Web Development: lot of repetative task</h1>
+			<ol>
+				<li>
+					CSS task
+						<ul>
+							<li> compile less saas into css  </li>
+							<li> run autoprefixer to add vender specific markups </li>
+							<li> minification: removing unnecessary character(eg. white space) from source code </li>
+							<li> concatinate. eg. bunch of css file to one css file</li>							
+						</ul>
+
+
+				</li>
+				<li>
+					Javascript  task
+					<ul>
+						<li> js HInt (check static code ie javascript code)  </li>
+						<li>Concatination : bunch of js file to one single js file</li>
+						<li> Uglification: minification + mangling (eg. reduce local variable to single letter)</li>
+						<li> Rechecking error</li>
+					</ul>
+				</li>
+				<li>
+					other task
+					<ul>
+						<li> images: optimizing file to reduce file size</li>
+						<li>Watching : changes in files and auto rerunning task</li>
+						<li>Server and Live-relaod</li>
+						<li>testing</li>
+						<li>Building site for deployment</li>
+					</ul>
+				</li>
+			</ol>
+		</div>
+
+		<div>
+			
+			<h1>Task Runner : to avoid lot of repetative task in web development</h1>
+				<p>configure tasks once and re-run it automatically when needed in webdevelopment.</p>
+				<h3> List of Task Runner </h3>
+					<ul>
+						<li>Grunt</li>
+						<li>Gulp</li>
+						<li>Cake</li>
+						<li>Brunch</li>
+						<li>Broccoli </li>
+					</ul>
+				<h3> Javascript Task Runner</h3>
+				<ol>
+					<li>Grunt: Configuration over Code</li><p>Configure all task a head of time</p>
+					<li> Gulp: Code Over Configuration </li> <p> Its code rather than configuration. Create task by writing code </p> 
+				</ol>
+		</div>
+
+		<div>
+			<h1>Web Tool : Task Runners: GRUNT</h1>
+
+			<p>WHat is Grunt : its Tasks Runner based on configuration of tasks by specifing  parameters , values </p>
+			<p> Install a global package  "grunt-cli". npm install -g grunt-cli </p>
+			<p>Install Grunt Locally: npm install grunt -save-dev  [<em>NOte: Need to setup <b>' pacakage.json '</b> file </em>] </p>
+			<p>Ffil Globbing Patterns</p>
+		</div>
+		
+		<div>
+			<h2>Grunt Module </h2>
+			<ol>
+				<li>JS Hint: Static JS code analysis tool</li>
+					<ul>
+						<li> npm install grunt-contrib-jshint--save-dev </li>
+						<li>npm install jshint-styisg--save-dev: it will style the ouput in a more readable manner than standard jshint produce</li>
+					</ul>
+				<li>configuration (information is specified a javascipt object specification): .jshintrc:json file contains configruration for jsHint</li>	
+
+								
+			</ol>
+
+		</div>
+
+</div>
+

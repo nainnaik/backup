@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Customize birthday reminder</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+      document.write('<base href="' + document.location + '" />');
+    </script>
+    <script src="script.js"></script>
+    
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel= "stylesheet">
+
+<style>
+  #footer .btn{
+    background-color: gray;
+    font-weight: bold;
+    color:brown;
+    font-size: 18px;
+  }
+</style>
+  </head>
+<body ng-app="birthdayToDo" ng-controller="main">
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h1>Birthday Reminders</h1>
+        </div>
+            <ul ng-repeat="bday in bdays">
+                <li>
+                  <span ng-hide="editing" ng-click="editing = true">{{bday.name}} | {{bday.date}}</span>
+                  <form ng-show="editing" ng-submit="editing = false">
+                    <label>Name:</label>
+                    <input type="text" ng-model="bday.name" placeholder="Name" ng-required/>
+                    <label>Date:</label>
+                    <input type="date" ng-model="bday.date" placeholder="Date" ng-required/>
+                    <br/>
+                    <button class="btn" type="submit">Save</button>
+                  </form>
+                </li>
+                
+            </ul>
+
+           <form ng-show="visible" ng-submit="newBirthday()">
+            <label>Name:</label>
+            <input type="text" ng-model="bdayname" placeholder="Name" ng-required/>
+            <label>Date:</label>
+            <input type="date" ng-model="bdaydate" placeholder="Date" ng-required/>
+            <br/>
+            <button class="btn" type="submit">Save</button>
+          </form>
+      </div>
+
+      <div id="push"></div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <a class="btn" ng-click="visible = true" ><i class="icon-plus"></i>click to add reminders</a>
+      </div>
+    </div>
+    </body>

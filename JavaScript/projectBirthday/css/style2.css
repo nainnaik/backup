@@ -1,0 +1,93 @@
+
+body{
+
+	font-style: oblique;
+	font-weight: 900;
+    font-family: Verdana, sans-serif; font-size:0.8em;
+
+
+}
+
+
+
+indImg{
+	background-size: 100%;
+	border-width:5px;	
+    border-top-style:groove;
+    opacity: 0.4;   
+}
+
+indImg:hover {
+    opacity: 2.0;
+   
+
+mainhead{
+
+
+}
+
+grname{
+    background-color:#F0E68C;
+    min-width:25px;
+    min-height:25px;
+    color: black;
+    font-weight:900;
+    font-style: oblique;
+
+}
+
+save,grsearch{
+	background-color:gray;
+	font-size:15px;
+	font-family: sans-serif;
+	border: 5px solid ;
+	font-style: oblique;
+	font-weight: 900;
+	
+}
+        header, nav, section, article,footer{
+            border:1px solid purple; margin:5px; padding:8px;
+        }
+        nav ul {
+            margin:0; padding:0;
+        }
+        nav ul li {
+            display:inline; margin :5px;
+        }
+        header{
+            color:navy;
+
+        }
+
+
+p{
+    font-size: 25px;
+    
+}
+
+table {
+    width: 100%;
+    border-spacing: 0.5rem;
+}
+
+th {
+    height: 10px;
+}
+td {
+    padding: 15px;
+}
+table, td, th {
+    border: 1px solid gray;
+}
+
+th {
+    background-color: gray;
+    color: white;
+}
+
+tbody{
+
+    border-color:gray;
+    background-color: green;
+}
+

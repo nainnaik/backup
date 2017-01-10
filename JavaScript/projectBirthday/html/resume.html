@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+ 
+ <head>
+		<link herf="http://necolas.github.com/normalize.css/"> <!--makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--viewport-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<title></title>
+		
+		<link href="../css/grid.css" rel= "stylesheet" type ="text/css">
+		
+<style> 
+#mainContainer{
+margin:0;
+padding:15px;
+}
+#header{
+	margin: 15px;
+	padding:10px;
+	text-align: center;
+	background-color: #C8DAE0;
+
+}
+
+#workEx{
+	margin: 15px;
+	padding:5px;
+	text-align: left;
+	text-indent: 5px;	
+
+}
+#skill{
+	margin:15px;
+	padding:5px;
+	text-align:left;
+	
+	
+}
+ul{
+
+
+}
+li{
+	background-color: #D2E6C5;
+	text-indent: 5px;
+}
+
+h1,h2,h3,h4,h5,p,li{
+
+    font-style: italic;
+
+}
+</style>
+
+ </head>
+ <body>
+ 		<div class="row" id="mainContainer">
+ 			<div class="col-12" id = "header">
+ 				
+ 			</div>
+ 			<div class="col-12" id="workExp">
+ 				<h3 id="weh"> Work Experience highlight </h3>
+ 				<ul id="workEx"> 
+
+ 				 </ul>
+ 				
+ 			</div>
+
+ 			<div class="row">
+
+ 				<div class="col-5" id="skill">
+ 			 		<h3>Techical Skills </h3>
+ 					<ul  id="tecSkill"> 
+ 					</ul>
+
+ 				</div>
+
+ 				<div class="col-5"  id="education">
+ 					<h3> Education </h3>
+ 					<ul id="edu">
+ 					</ul> 				
+ 				</div>
+
+ 			</div>	
+
+
+ 			<div class="col-12" id="projects">
+ 				<h2> Projects Details </h2>
+ 				<ul id="proj">
+ 				</ul>
+  			</div>
+
+
+ 		</div>
+
+ 		<script>
+ 		// Add HEADER INFO
+ 		
+ 			var mainName= "<h1>NAYANA NAIK</h1>";
+ 			var contactMain = "<h4> 2300 24th Road S, Arlington Va,22206 </h4>";
+ 			var emailTo = "<h4>nayana.naik@hotmail.com</h4>";
+ 			$("#header").append(mainName, contactMain, emailTo);
+
+ 		//	Add experiance highlight
+
+ 			var expList= ["<li >QA Tester with 3 years of IT experience and strong analytical skills.</li>", "<li> Experience in Functional, Regression, Performance, User Acceptance, Exploratory and Stress testing.</li>","<li>	Experience in regression test automation using Selenium WebDriver, TestNG frameworks and Java.</li>","<li>Experience in test automation using QTP.</li>", "<li>Experience in writing testing artifacts such as Test Plan, Test Summary document.</li>", 
+ 			  "<li> EXcellent in finding, documenting and tracking bugs. </li>", "<li>Knowledge of defect tracking tools like JIRA, Bugzilla, ClearQuest.</li>", "<li>Experience in Web applications and Client/Server applications.</li>","<li>Knowledge of all phases of Software Development Life Cycle (SDLC) and Software Testing Life Cycle (STLC).</li>"];
+
+			$("#workEx").after(expList);
+
+
+		// Add Techinical skills 
+			var tSkill = ["<li>Tools/Frameworks: Selenium Web-Driver 2.0, QTP, JIRA, JUnit, TestNG.</li>","<li>Languages: Java, JavaScript, HTML, CSS.</li>","<li>Database: SQL, ORACLE.</li>"];
+			   $("#tecSkill").after(tSkill);
+
+
+		//add education detaila
+			var educa = ["<li>	Relational Database and SQL – Stanford University, CA (July 2014).</li>","<li>	Fundamentals of Computer Science and Programming from Stanford University, CA (Aug 2014)</li>","<li>Welingkar Institute of Management, Mumbai, India Business Management (Graduated on: May 2007)</li>","<li>Mumbai University, Mumbai, India. BS in Pharmacy (Graduated on: May 2003) </li>"];
+			$("#edu").after(educa);
+
+
+		
+
+		//add project details
+			var project =["<h3> PROFESSIONAL EXPERIENCE: </h3>", "<li> <h3>QA Tester</h3> <h4> (Dec13 - present) </h4></li>","<p>PoolXing LLC( Herndon VA)</p>","<p>As a functional tester, for PoolXing’s web based and mobile (iOS) applications, I am responsible for testing various features and functionalities of the web application e.g. mainline functions, usability, accessibility, error conditions and boundary conditions.</p> ","<li> <h3>QA Analyst </h3></li>","<p>(Feb 06 - Aug 08)</p>","<p>Siro ClinPharm Inc (Mumbai/India)  Client: Pfizer Inc (New London/CT)</p>","<p>I worked as a QA lead on the clinical trial application for Pfizer. The application helps facilitate pre- processing of oncology clinical trials for Pfizer. and Here I performed testing using Ration Quality Manager used Rational ClearQuest to capture and report defects.</p>"] ;
+
+			$("#proj").after(project);
+
+		
+
+		
+
+
+
+ 		 </script>
+
+
+ </body>
+ </html>

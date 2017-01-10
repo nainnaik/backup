@@ -1,0 +1,34 @@
+*{
+	border:1px solid red !important;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@media only screen and (max-width: 300px){
+	p{
+		background-color: blue;
+	 }
+}
+.row{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	}
+.row{
+	width:100%;
+}
+.col-1{
+	width:8.33%;
+}
+.col-2{
+	width:16.66%;
+}
+.col-3{
+	with:25%;
+}
+.col-4{
+	width:33.33%;
+}

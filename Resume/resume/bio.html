@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US"><!-- information of what TYPE of document to expcet -->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>classRoom</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap  and jquery-->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+	<!--script src="jquery-1.12.2.min.js"></script-->
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<style type="">
+div{
+	margin:0 auto;
+	padding:20px 20px;
+
+}
+	
+
+</style>
+
+  </head>
+
+
+
+
+<body>
+  <div id="main"><h1>main</h1>
+      
+    <div id="header" class="center-content clear-fix">
+<h2> header </h2> 
+      <ul id="topContacts" class="flex-box"></ul>
+    </div>
+
+    <div id="allskill" style="clear: both;"></div>
+    <div  id="skills" class="gray"></div>   
+  </div>
+
+  <script>
+
+var bio={
+	"name":"Jayesh Jadhav",
+	"role":"lead project manager",
+	"contacts": { 
+		"mobile":"703+++++++",
+		"email":"jayjadhav@hotmail.com",
+		"location":"Arlington Va"
+	},
+	"welcomeMessage":"",
+	"skills":["html","CSS","Javascript","jQuery","HTML5","Sass"],
+	"pic": ""	
+};
+
+var HTMLheaderName = "<h1 id='name'>%data%</h1>";
+var HTMLheaderRole = "<span>%data%</span><hr/>";
+
+var HTMLcontactGeneric = "<li class='flex-item'> <span class='orange-text'>%contact%</span><span class='white-text'>%data%</span></li>";
+
+var HTMLmobile = "<li class='flex-item'><span class='orange-text'>mobile</span><span class='white-text'>%data%</span></li>";
+var HTMLemail = "<li class='flex-item'><span class='orange-text'>email</span><span class='white-text'>%data%</span></li>";
+
+
+	
+	function displayHeading(){
+
+			if(bio.name.length > 0){
+
+				var myName = HTMLheaderName.replace("%data%",bio.name);
+				$("#header").prepend(myName);
+
+			}
+
+			if(bio.role.length > 0){
+			var myRole= HTMLheaderRole.replace("%data%",bio.role);
+			$("#header").append(myRole);
+
+			}
+			if(bio.contacts.mobile.length>0 || bio.contacts.email.length>0 ||bio.contacts.location.length>0   ){
+				var myAddr = HTMLcontactGeneric.replace("%contact%","Address").replace("%data%",bio.contacts.location);
+
+				var myMobile= HTMLmobile.replace("%data%",bio.contacts.mobile);
+				var myEmail =HTMLemail.replace("%data%",bio.contacts.email);
+					$("#header").append(myMobile);
+					$("#header").append(myEmail);
+					$("#header").append(myAddr);
+			}	
+				
+
+	} displayHeading();
+
+ </script> 
+
+</body>
+</html>
+
+
+
+                
+
+

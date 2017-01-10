@@ -1,0 +1,138 @@
+﻿<DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>White flowers Portfolio </title>
+  <meta charset="utf-8"><!-- This tells the browser how to read the document. --> 
+  <link herf="http://necolas.github.com/normalize.css/"> <!--makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing-->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--viewport--> 
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'> <!--googlefonts ink--> 
+
+    <!--bootstrap link start-->    
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+  <!--bootstrap link end--> 
+  <!--jQuery-->
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+  <!--css link start--> 
+  <style type="text/css">
+body{
+ font-family: 'Lato', sans-serif;
+ color: #747704;
+ font-weight:300;
+ margin-top: 25px;
+ margin-bottom: 100px;
+ margin-right: 150px;
+ margin-left: 10px; 
+ 
+}
+
+p{
+      display: none;
+    }
+
+.text-muted{
+   color:gray;
+}
+
+.text-thin{
+font-weight: 100
+}
+.title-supper{
+ font-sizes:60px;
+}
+.title-logo{
+  margin-top:20px;
+}
+
+.right{
+
+float:right;
+}
+hr {
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color:#BCBBBB; /* old IE */
+    background-color: #BCBBBB; /* Modern Browsers */
+}
+
+</style>
+  <!--css link end--> 
+
+</head>
+<body>
+<div class ="container">
+  <div class ="row">
+    <div class ="col-md-6">
+        <img class= "img-responsive logo"  src="C:\Users\Nayana\Documents\Angular2016\img\flower_logo.jpg"  alt="logo" width="15%"> 
+    </div>
+
+    <div class ="col-md-6 text-right text-uppercase">
+        <h1 class="title-supper text-thin"> White Flowers  </h1>
+        <h4>white flowers</h4>
+    </div>
+  </div>
+  
+  <div class ="row">
+    <div class ="col-md-12 ">
+           <hr size="10">
+    </div>
+
+  <div class ="row">
+    <div class ="col-md-12" >
+     <img id="kamal"class = "img-reponsive" src= "C:\Users\Nayana\Documents\Angular2016\img\bhramha_kamal.jpg " alt="bramha kamal" width="100%"  alt="centerContent" >
+     <p class="info">
+      Night-blooming cereus is the common name referring to a large number of flowering ceroid cacti that bloom at night. The flowers are short lived, and some of these species, such as Selenicereus grandiflorus, bloom only once a year, for a single night.[1] Other names for one or more cacti with this habit are princess of the night, Honolulu queen (for Hylocereus undatus), Christ in the Manger, Dama de Noche and queen of the night
+     </p>
+   
+    <p>https://en.wikipedia.org/wiki/Night-blooming_cereus</p>
+     </div>
+  </div>
+
+
+  <div class ="row text-muted">
+     <div class ="col-md-12">
+        <h2 > Family </h2>
+      </div>
+  </div>
+
+  <div class = "row">
+      <div class ="col-md-4">        
+         <img class="img-responsive" src= "C:\Users\Nayana\Documents\Angular2016\img\parijat.jpg" alt="parijat">
+         <h3 class ="text-uppercase"> Parijat</h3>
+         <p >
+          Nyctanthes arbor-tristis is a shrub or a small tree growing to 10 m tall, with flaky grey bark. The leaves are opposite, simple, 6–12 cm long and 2–6.5 cm broad, with an entire margin. The flowers are fragrant, with a five- to eight-lobed white corolla with an orange-red centre; they are produced in clusters of two to seven together, with individual flowers opening at dusk and finishing at dawn. The fruit is a flat brown heart-shaped to round capsule 2 cm diameter, with two sections each containing a single seed. 
+         </P>
+      </div>
+        
+      <div class ="col-md-4"> 
+         <img class="img-responsive"src= "C:\Users\Nayana\Documents\Angular2016\img\gokarn.jpg" alt="gokarn">
+          <h3 class ="text-uppercase"> Gokran</h3>
+          <p class="info">www.google.com</P>
+      </div>
+  	
+       <div class ="col-md-4"> 
+           <img class="img-responsive" src= "C:\Users\Nayana\Documents\Angular2016\img\bakul.jpg" alt="bakul">
+            <h3 class="text-uppercase">bakul</h3>
+           <p >
+           Mimusops elengi is a medium-sized evergreen tree found in tropical forests in South Asia, Southeast Asia and northern Australia. English common names include Spanish cherry,[1] medlar,[1] and bullet wood. In it is called maulsari in Hindi, bakul in Sanskrit, Marathi, Bengali, "Boula" in Odia, Bokul in Assamese, "Tanjung" in Indonesian and Malay, "Elanji" (ഇലഞ്ഞി) in Malayalam, Manipuri, magizamaram மகிழ், மகிழமரம் and ilanji இலஞ்சி in Tamil, AND ranja "Bakula" (ಬಕುಲ), "Pagade Mara" "Vajradhanthi" in Kannada.[2] Its timber is valuable, the fruit is edible, and it is used in traditional medicine. As the trees give thick shade and flowers emit fragrance, it is a prized collection of gardens.
+           https://en.wikipedia.org/wiki/Mimusops_elengi
+           </P>
+      </div>   
+  </div>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $("img").click(function(){
+        $("p").toggle("slow");
+    });
+});
+</script>
+</body>
+</html>

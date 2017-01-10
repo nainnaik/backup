@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+ 
+ <head>
+ 	
+
+
+ 		<link herf="http://necolas.github.com/normalize.css/">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<link href="../css/grid.css" rel= "stylesheet" type ="text/css">
+
+		<style>
+		section{
+		margin :0;
+		padding:50px;
+	
+		background-color:beige;
+	
+	}
+		</style>
+ </head>
+ <body>
+	<section id = "map" >
+		<form id="enDetail" action="#">
+			<label for="street">Address: </label> 
+			<input type= "text" id ="address" value>
+			<label for="city">City: </label> 
+			<input type= "text" id ="city" value>
+			<button id ="submit-btn">submit</button>
+		
+		</form>
+
+
+    </section>
+
+    	<script type="text/javascript">
+    	  function loadData(){	
+    		 var $body=$("body");
+    		 var streetStr = $("#street").val();
+    		 var cityStr =$("#city").val();
+    		 var address = streetStr + ","+cityStr;
+    		 var streetviewurl="https://maps.googleapis.com/maps/api/streetview?size=1000x400&location="+address+" ";
+    		 $body.append('<img class="bigimg" src="'+ streetviewurl+'">');
+
+
+
+
+    	  }
+    	  $("#enDetail").submit(loadData); 
+    	</script>
+    </body>
+    </html>

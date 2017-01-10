@@ -1,0 +1,36 @@
+<table border="1" id="mtable">
+    <thead>
+    	<tr>	
+    		<td>Item</td>
+    		<td>Red</td>
+    		<td>Green</td>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr>
+    		<td>Some Item</td>
+    		<td><input type="checkbox"/></td>
+    		<td><input type="checkbox"/></td>
+    	</tr>
+    </tbody>
+</table><br/><br/>
+<input id="row" placeholder="Enter Item Name"/>
+<button id="irow">Insert Row</button>
+<br/><br/>
+<input id="col" placeholder="Enter Heading"/>
+<button id="icol">Insert Column</button>
+
+<script type="text/javascript">
+$('#irow').click(function(){
+    if($('#row').val()){
+        $('#mtable tbody').append($("#mtable tbody tr:last").clone());
+    }else{alert('Enter Text');}
+});
+$('#icol').click(function(){
+    if($('#col').val()){
+        $('#mtable tr').append($("<td>"));
+        $('#mtable thead tr>td:last').html($('#col').val());
+        $('#mtable tbody tr').each(function(){$(this).children('td:last').append($('<input type="checkbox">'))});
+    }else{alert('Enter Text');}
+});
+</script>

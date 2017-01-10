@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    border-spacing: 0.5rem;
+}
+
+th {
+    height: 50px;
+}
+td {
+    padding: 15px;
+}
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}

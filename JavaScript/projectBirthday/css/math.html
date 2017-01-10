@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+ 
+ <head>
+		<link herf="http://necolas.github.com/normalize.css/"> <!--makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing-->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--viewport-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		
+		<title></title>
+		
+		<link href="../css/grid.css" rel= "stylesheet" type ="text/css">
+		<link href="../css/math.css" rel="stylesheet" type="text/css">
+
+		<style>
+
+
+			#wrapper{ 
+
+				margin:auto;
+  				padding:25px;
+  				border:5px solid brown;
+  				content:50%; 			    
+ 				background-position: center center;
+  				background-repeat: no-repeat;
+  				background-attachment: scroll;
+  
+			}
+
+	
+
+		    div {
+		     	margin:auto;
+		     	padding:35px;		     	     
+		     	background-color: #4EB8BA;
+		     	outline: #00FF00 dotted thick
+
+		    }
+
+		     h1{
+		     	margin:auto;	     	
+		     	padding:55px;
+		     	text-align: center;
+		     	 
+		     }
+		    p{
+		    	font-family: sans-serif;
+		    	margin:auto;	     	
+		     	padding:15px;
+		     	text-align: left;
+		     	 
+		    	
+		    }
+		    
+
+		</style>
+ </head>
+ 	<body>
+ 	<main id="wrapper">
+
+ 		<h1 class="col-10" id="header"> </h1>
+ 		<div class="col-9">
+ 			<p id="dt" class="col-5">Today is : </p>
+ 			<p class="col-5" id = "resultAdd" >Here is your addition : </p>
+ 			<p class="col-5" id = "resultMulti" > Here is your multiplication : </p>
+ 			<p class="col-5" id = "resultDivi" >Here is your division  : </p>
+ 			<p class="col-5" id="resultSq"> Here is squareroot:   </p>
+ 		</div>
+ 
+ 		<div class="col-9"> 
+ 	 		Side 1 of a triangle <input class="col-1" id="one" type ="number" value=" "> 
+ 	 		Side 2 of a triangle <input class="col-1" id="two" type ="number" value =" ">
+ 	 		Side 3 of a triangle <input class="col-1" id="three" type ="number" value=" ">
+ 	 		<button class="col-1" id="areaBtn" type="button" name="calculate"  value="calculate"> calculate </button>
+ 	 		<h3 class="col-6" id="triangleArea" > Area of a triangle: </h3>
+ 		</div>
+ 	</main>
+
+ 
+    	
+ 		<script>
+ 		//	greeting
+
+//alert("welcome to JS practice")
+
+document.getElementById("header").innerHTML = "Hello JavaScript!";
+
+//display current day , date month and year
+	var today= new Date(); 
+	var todayDt= today.getDate();
+	var currentMonth= today.getMonth();
+	var currentYear= today.getYear();
+	var day = today.getDay();  
+	var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+	var currentYear	= today.getFullYear();  
+
+	document.getElementById("dt").innerHTML="Today is : " + daylist[day] + currentMonth +"/"+ todayDt +"/"+ currentYear + "." ;  
+
+// simple Addition
+	var a = parseInt(prompt("Enter first number"));
+	var b = parseInt(prompt("Enter second number"));
+
+	document.getElementById("resultAdd").innerHTML ="Addition of two number is: "+ a+b ;
+	document.getElementById("resultMulti").innerHTML ="Multiplication of two number is" + a * b;
+	document.getElementById("resultDivi").innerHTML ="division is "+ a/b;
+
+// calculate SquareRoot 
+ 	var sqRoot= prompt("Enter a number to findOut SquareRoot");
+ 	document.getElementById("resultSq").innerHTML="SquareRoot is: "+ Math.sqrt(sqRoot);
+	
+	
+  // onclick areaBtn calculate area of a triangle
+    document.getElementById("areaBtn").addEventListener("click", triangleArea);
+
+     //calculate area of a triangle	
+	function triangleArea() {	
+
+		var side1 =parseInt(document.getElementById("one").value);
+   	    var side2 =parseInt(document.getElementById("two").value);
+		var side3 =parseInt(document.getElementById("three").value);
+		var perimeter = (side1 + side2 + side3)/2 ;	
+	    var areaOfTriangle =Math.sqrt( perimeter*(perimeter - side1)*(perimeter - side2)*(perimeter - side3) );
+		document.getElementById("triangleArea").innerHTML ="Area of triangle is : "+ areaOfTriangle;
+	} 
+
+ 		</script>
+
+	 </body>
+
+ </html>
