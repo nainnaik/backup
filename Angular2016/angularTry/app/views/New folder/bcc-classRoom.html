@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="bccApp" > <!-- information of what TYPE of document to expcet -->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>BCC</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+    <!-- bootstrap  and jquery-->
+   
+	<!--link href="C:\Users\Nayana\Documents\Angular2016\angularBCC\bower_components\bootstrap\dist\css\bootstrap.css" rel="stylesheet"-->
+
+<!-- build:css /**.css-->
+	<link href="..\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+	<script src="..\bower_components\jquery\dist\jquery.js"></script>	
+
+	<script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"></script>
+
+<!--endbuild-->
+<style>
+	.row-header{
+		margin:0 auto;
+		padding :0 auto;
+
+	}
+
+	
+	.row-footer{
+		background-color: #B5B9BA;
+		margin: 0 auto;
+		padding:20 0 20 0;
+
+	}
+	address{
+		font-size: 80%;
+		margin: 0 auto;
+		color: #0f0f0f;
+	}
+</style>
+	
+
+</head>
+<body >
+ <nav class="navbar navbar-inverse " role="navigation">
+	<div id="navBar" class="container">
+        <ul id="topNav"class="nav navbar-nav">
+        	
+        	<li id="indHtml"><a href="bccIndex.html"><span class="glyphicon glyphicon-education" aria-hidden="true"> </span> <span> Ballston Children Center </span></a></li>
+            
+            <li li="homeHtml"class="active"><a href=".\bccIndex.html"><span class="glyphicon glyphicon-home" > </span>Home</a></li>
+
+            <li id="abtHtml"><a href="#">About</a></li>
+            
+            <li id="rgsHtml"><a href="">Registration/Admissions</a></li>
+
+            <li id="roomlist"> <a href=".\bcc-classRoom.html" > Classrooms </a></li>
+				
+			<li class="dropdown"><a id="extraClass" data-target="dropdown-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			Extra Classes <span class="caret"></span></a>
+    			<ul class="dropdown-menu" aria-labelledby="extraClass">
+    				<li><a href="#">Ballet</a></li>
+    				<li><a href="#">Spanish</a> </li>
+			    	<li><a href="#">Piano </a> </li>
+			    	<li><a href="#">Performing art</a></li>
+			    	<li><a href="#">Yoga</a></li>
+			    </ul>
+    		</li>
+			<li><a href=".\bcc-contact.html">Contact/Location</a></li>     
+		</ul>
+    </div>
+</nav>  
+<main>
+		<div class="container">
+			<div class="row row-content" ng-controller="classRoomController as classRoomCtrl">
+				<div class="col-xs-12">
+					<ul class="nav nav-tabs" role="tablist">
+	   			 		<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(1)}"><a ng-click="classRoomCtrl.select(1)" href="#" aria-controls="blueroom" role="tab" data-toggle="tab">BlueRoom</a></li>
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(2)}" > <a ng-click="classRoomCtrl.select(2)" href="#" aria-controls="greenroom" role="tab" data-toggle="tab">Green Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(3)}"><a ng-click="classRoomCtrl.select(3)" href="#" aria-controls="purpleroom" role="tab" data-toggle="tab">Purple Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(4)}" > <a ng-click="classRoomCtrl.select(4)" href="#" aria-controls="orangeroom" role="tab" data-toggle="tab">Orange Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(5)}"><a ng-click="classRoomCtrl.select(5)" href="#" aria-controls="redroom" role="tab" data-toggle="tab">Red Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(6)}" > <a ng-click="classRoomCtrl.select(6)" href="#" aria-controls="yellowroom" role="tab" data-toggle="tab">Yellow Room</a></li>
+
+	    			</ul>
+
+				<div class="class-content"> 
+
+					<ul class="media-list tab-pane fade in active">
+
+						<li class= "media" ng-repeat="classRoom in classRoomCtrl.classRooms|filter:classRoomCtrl.filtTxt">
+
+							<div class="media-left media-middle">
+							<figure>
+								<a href="#">							
+								<img class="media-object img-thumbnail" ng-src= {{classRoom.img}} alt="teacherImage" width="200px">
+								</a>
+								
+								<figcaption>Teacher's photo</figcaption>
+							</figure>	
+							</div>
+
+							<div class="media-body">
+
+								<h2 class= "media-heading">{{classRoom.listRoom}} Teacher: {{classRoom.teacherName}} </h2>
+								<p><span>{{classRoom.description}}</span></p>
+							</div>	
+						</li>
+					</ul>
+
+				</div>
+		</div>
+	</div>
+</main>
+
+<footer>
+<div class="container">
+	<div class="row row-footer">
+		<div class="col-sm-2">
+			<h5>Links</h5>
+			<ul class="list-unstyled">
+				<li><a herf="#">Ballston Children Center</a></li>
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#">About</a></li>
+	            <li><a href="#">Registration/Admissions</a></li>
+	            <li><a href="#">Contact</a></li>
+	            <li><a href="#">Loction/Direction</a></li>
+	        </ul>
+		</div>
+		
+		<div class="col-sm-8">
+			<h3>Ballston Children Center</h3>
+			<address> wilson blvd arligotn 22203</address>
+		</div>
+		
+	</div>
+</div>
+</footer>
+<!--build:js js/app.js -->
+
+<!-- Latest compiled angular -->
+
+<script src="..\bower_components\angular\angular.min.js"></script>
+<!--js contrller file-->
+
+<script src="./js/classroom.js" ></script>
+
+
+<!-- endbuild-->
+
+</body>
+
+
+</html>

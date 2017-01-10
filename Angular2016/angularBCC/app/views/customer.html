@@ -1,0 +1,38 @@
+	
+		<div class="container" >	
+			<div class="panel panel-default">
+				<div class="panel-heading"> Table Example</div>				
+					
+				<div class="panel-body">					
+
+					<span> <h3>Total number of customers:{{customers.length}} </h3> </span>
+					
+					<label for="cusomerDeatil"><span> Find Customer detail </span></label>
+				
+					<input id="customer detail" type="text" placeholder="Enter customer's Name" ng-model="customerFilter.name" />
+				
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tr>
+								<th ng-click="doSort('name')">Name</th>
+								<th ng-click="doSort('city')">City </th>
+								<th ng-click="doSort('orderTotal')">OrderTotal</th>
+								<th ng-click="doSort('joined')"> Joined</th>
+								<th>&nbsp;</th>
+
+
+							</tr>
+							<tr data-ng-repeat="cust in customers| filter:customerFilter |orderBy:sortBy:reverse">
+								<td> {{ cust.name| uppercase  }} </td>
+								<td> {{ cust.city }} </td>
+								<td> {{ cust.orderTotal |currency }} </td>
+								<td> {{ cust.joined | date:"MM-dd-yyyy"}} </td>
+								<td><a href="#/orders/{{cust.id}}"</a> view Orders</td>
+								
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		
+		

@@ -1,0 +1,27 @@
+{
+  "name": "preschool",
+  "homepage": "n",
+  "authors": [
+    "nainnaik <nayana.naik@hotmail.com>"
+  ],
+  "description": "preschool website",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "keywords": [
+    "preschool",
+    "daycare",
+    "children",
+    "center"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

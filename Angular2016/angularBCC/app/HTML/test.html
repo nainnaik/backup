@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="cApp"><!-- information of what TYPE of document to acept-->
+
+	<head>	<!--information about the document-->
+			<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+		
+		<!--title for document -->
+		<title>test Angular</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<!-- CSS -->
+	    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+	    <!-- bootstrap -->
+	    <link href="../bower_components/jquery/jquery.min">
+		<link href="C:\Users\Nayana\Documents\Angular2016\angularBCC\bower_components\\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\Documents\Angular2016\angularBCC\bower_components\\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+
+	
+	<script href="../bower_components/bootstrap/js/bootstrap.min.js"></script>
+	
+  
+		
+	</head>
+	<body>	
+	<main>
+		<div>
+			<div class="class-content"> 
+					<ul class="media-list tab-pane fade in active"  ng-controller="classRoomController">
+						<li class= "media" data-ng-repeat="room in classRooms|filter:classRooms.filtTxt">
+
+					<div class="media-left media-middle">
+							<figure>
+								<a href="#">							
+								<img class="media-object img-thumbnail" ng-src= {{room.img}} alt="teacherImage" width="200px">
+								</a>
+								
+								<figcaption>Teacher's photo</figcaption>
+							</figure>	
+							</div>
+
+							<div class="media-body">
+								<h2 class= "media-heading">{{room.listRoom}} Teacher: {{room.teacherName}} </h2>
+								<p><span>{{room.description}}</span></p>
+							</div>
+								
+						</li>
+					</ul>
+
+					</div>
+				</div>
+			</div>
+		</main>
+	
+
+		
+
+		<!--angularjs-->
+		<script src="..\bower_components\angular\angular.min.js"></script>
+			<!--controllers-->
+
+		<script src="..\app\js\cApp.js"></script>
+		<script src="..\app\controllers\testController.js"></script>
+		
+	
+
+
+		
+	</body>
+	</html>

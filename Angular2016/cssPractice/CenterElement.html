@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8"/>
+		<title>div or blockElement in the ceneter of page </title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+		<style>
+		  #zeroMargin{
+		  	margin: 0 auto;
+		  	background-color: pink;
+		  	width:300px;
+		  	height:200px;
+		  	text-align: center;
+		  }
+		  #exactCenter {
+			  position: absolute;
+			  width: 300px;
+			  height: 200px;	
+			  z-index: 15;
+			  top: 50%;
+			  left: 50%;
+			  margin: -100px 0 0 -150px; /*negative of height of the div i.e -100 shifts it above by 100, similarly for margin-left*/
+			  background: brown;
+			  text-align: center;
+			}
+
+		  
+
+
+		</style>
+	</head>
+	<body>
+		<div id="zeroMargin"> at center of the page</div>
+		<div id="exactCenter"><p> exactly at the center of the page from top, bottom and sides </p></div>
+		
+
+
+	</body>

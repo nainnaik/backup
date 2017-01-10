@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="bccApp"> <!-- information of what TYPE of document to expcet -->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>Just forms</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+</head>
+<body>
+	<form for="formName"> 
+		<fieldset>
+		<legend> Grocery </legend>>
+
+			<div> 
+				<label for="shopName">Shop Name
+					<input id="shopName" type="text" list="shopList">
+						<datalist id="shopList">
+							<option> Whole Food </option>
+							<option>Giant</option>
+							<option>indian Store</option>							
+						</datalist>
+				</label>			
+			</div>			
+			<div>
+				<label for="groceryList"> Grocery List
+					<input id="groceryList" list="groceryName">  
+						<datalist id="groceryName">
+							<option index="0" > egg</option>
+							<option index="0">bread</option>
+							<option index="0">salad</option>
+							<option index="0"> fruits</option>
+						</datalist>
+				</label>
+			</div>
+		</fieldset>
+	</form>
+</body>
+</html>

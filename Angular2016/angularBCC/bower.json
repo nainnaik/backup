@@ -1,0 +1,31 @@
+{
+  "name": "angularBCC",
+  "description": "website for the preschool daycare",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "preschool",
+    "daycare",
+    "ballston",
+    "children",
+    "center",
+    "arlington",
+    "va"
+  ],
+  "authors": [
+    "nayana"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html><!-- information of what TYPE of document to acept-->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>BCC_Registration</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap -->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+
+	<!-- Css-->
+	<style type="text/css">
+	.row-header{
+		margin:0px auto;
+		padding :0px auto;
+
+	}
+
+	
+	.row-footer{
+		background-color: #B5B9BA;
+		margin: 0px auto;
+		padding:20px 0px 20px 0px;
+
+	}
+	
+	h1{
+		font-size: 2.5em;
+		font-weight: bold;
+	
+	}
+	h3{
+		font-size: 1.8em;
+		font-weight: normal;
+	}
+	span{
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	input{border-radius: 3px;}
+	
+
+
+
+
+	</style>
+  </head>
+  <body>
+  <body>
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+        	<li><a href="bcc.html"><span class="glyphicon glyphicon-education" aria-hidden="true"> </span> <span> Ballston Children Center </span></a></li>
+            <li class="active"><a href="bcc.html"><span class="glyphicon glyphicon-home" aria-hidden="true"> </span> Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Registration/Admissions</a></li>
+            <li class="dropdown" ><a id="classroom" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			Classroom <span class="caret"></span>  </a>
+			  <ul class="dropdown-menu" aria-labelledby="classroom">    
+			    <li><a href="#">Blue Room</a> </li>
+			    <li><a href="#">Green Room </a> </li>
+			    <li><a href="#">Purple Room</a> </li>
+			    <li><a href="#">Orange Room</a> </li>
+			    <li><a href="#">Red Room</a> </li>
+			    <li><a href="#">Yellow Room </a> </li>
+			  </ul>
+			</li>
+			<li class="dropdown"><a id="extraClass" data-target="#" href="bcc-classroom.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			Extra Classes <span class="caret"></span></a>
+    			<ul class="dropdown-menu" aria-labelledby="extraClass">
+    				<li><a href="#">Ballet</a></li>
+    				<li><a href="#">Spanish</a> </li>
+			    	<li><a href="#">Piano </a> </li>
+			    	<li><a href="#">Performing art</a></li>
+			    	<li><a href="#">Yoga</a></li>
+			    </ul>
+    		</li>
+			<li><a href="bcc-contact.html">Contact/Location</a></li>
+            
+        </ul>
+    </div>
+</nav>  
+
+<header class="jumbotron">
+		<div class="container">
+			<div class="row row-header">
+				<div class="col-xs-12 col-sm-12">
+					<h1>Online registration </h1>					
+				</div>
+			</div>
+
+		</div>
+</header>	
+<div class="container">
+	<div class="row">
+	  <div class="col-md-6 col-xs-12 ">	  
+			<form class="form"  role="form" id="parentInfo">
+				 	<h3> Parent's information</h3>
+				<div class="form-group">	
+				  	<label for="name">
+				  	 	<span >Parent's Name </span>
+				   	 	<input class="form-group" name="parentName"/>
+				    </label>
+				</div>
+				  
+				<div class="form-group">
+				    <label for="email">
+				        <span>Email:</span>
+				        <input class="form-group" id="email" type="email" id="email" placeholder="example@bcc.com" reuired autocomplete="email">
+				    </label>
+				</div>  
+				<div class="form-group">
+		    		<label for="address"><span>Address:</span> </label>
+		    		<input type="text" class="form-group" id="parent address">
+		  		</div>
+				<div class="form-group">
+				        <label for="tel-number">
+				            <span>Telephone Number</span>
+				            <input class="form-group"  type="tel" id="tel-number" placeholder="Contact Number" required autcomplete="tel">
+				        </label>
+				</div> 
+				<!--parent form over-->
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+<div clss="row">
+<div class="col-md-6 col-xs-12 ">	  
+	<form class="form"  role="form" id="childinfo">
+		<h3> Child's information</h3>
+		 <div class="form-group">	
+		  	<label for="childName" >
+		  	 <span>First Name</span>
+		   	 <input class="form-group" name="child'sName"/>
+		   	  <label for="childLName">
+		  	 <span>Last Name</span>
+		   	 <input class="form-group"  name="child's LastName"/>
+		    </label>
+		    </label>
+		</div>
+		
+		<div class="form-group">    
+		    <label for="childBirthdate">
+		  	 <span>child's date of birth</span>
+		   	 <input class="form-group"  name="childBirthdate"/>
+		    </label>
+		 </div>
+
+		<div class="form-group">
+			<lable for="toiletTrain">
+			<span> Toilet Train</span>
+			<data-list>
+			<input list="TT">
+	  			<datalist id="TT">
+	    		<option value="Yes">
+	    		<option value="No">
+	    	</lable>			    	    	
+		</div>
+				<label>
+		   	 		  <button type="submit" class="btn btn-default">Submit</button>
+		   	 	</label>	
+	</form>
+</div>
+</div>
+</div>
+
+
+
+  
+<footer>
+<div class="container">
+	<div class="row row-footer">
+		<div class="col-sm-2">
+			<h5>Links</h5>
+			<ul class="list-unstyled">
+				<li><a herf="#">Ballston Children Center</a></li>
+	            <li class="active"><a href="#">Home</a></li>
+	            <li><a href="#">About</a></li>
+	            <li><a href="#">Registration/Admissions</a></li>
+	            <li><a href="bcc-contact.html">Contact</a></li>
+	            <li><a href="#">Loction/Direction</a></li>
+	        </ul>
+		</div>
+		
+		<div class="col-sm-8">
+			<h3>Ballston Children Center</h3>
+			<address> wilson blvd arligotn 22203</address>
+		</div>
+		
+	</div>
+</div>
+</footer>
+
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+	
+</html>

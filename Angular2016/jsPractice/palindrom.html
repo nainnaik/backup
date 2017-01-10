@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>2 cat clicker GAME</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap -->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+	<style>body{
+		margin:0,auto;
+		}
+		p{color:blue;}
+		</style>
+</head>
+<body>
+<div class="container">
+	<div class="jumbotoran"
+	<div class="row">		
+	<form action="#" method="get">
+			<h3>JavaScript Palindrome Program </h3>
+			<input type="text" id="txtbox" placeholder="Enter String" />
+			<input type="button" id="myBtn" value="Check Palindrome" />
+
+	</form>
+		<p id="msg" ></p>
+</div>		
+	</div>
+</div>
+<script>
+	document.getElementById("myBtn").addEventListener("click", uInput);
+	function uInput()
+		{
+			// value from html textbox
+			var userInput = document.getElementById('txtbox').value;
+					
+			//call checkPalindrom() and pass userInput
+			var result = checkPalindrom(userInput);
+			var p=document.getElementById("msg");
+				p.innerHTML='The Entered String "'+ userInput +" :"+result+'"';
+		}
+	function checkPalindrom(userInput){
+	
+		 var reverse=[];	
+		for (var i=userInput.length-1; i>=0;i--){ // reverse the user input
+			reverse +=userInput[i] ;
+		} 
+		
+		if(userInput.length===0 ){
+			return	"please enter value";
+		}
+
+		else if( userInput==reverse){
+			return "its palindrom";
+		}
+		else {
+			return "sorry not palindrom";
+		}
+	 	
+	} 
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+var mylist=['itune','iphone','mac','ipod',"SmartWatch"];
+
+function removelist(mylist){
+mylist.splice(mylist);
+console.log(mylist)
+
+	
+
+}

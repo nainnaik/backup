@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap  and jquery-->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+	<!--script src="jquery-1.12.2.min.js"></script-->
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<style>
+
+  .row-header{
+		margin:0 auto;
+		padding:0;
+	}
+
+	
+	.row-footer{
+		background-color: #B5B9BA;
+		margin: 0 auto;
+		padding:20 0 20 0;
+
+	}
+	address{
+		font-size: 80%;
+		margin: 0 auto;
+		color: #0f0f0f;
+	}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+        	<li><a href="#"><span> Ballston Children Center </span></a></li>
+            
+			<li class="dropdown"><a id="classroom" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			classRoom <span class="caret"></span></a>
+    		 <ul class="dropdown-menu" aria-labelledby="classroom">   
+			    <li class="drop"><a  href="testclassroom.html" id="blue">Blue Room </a></li>		
+			    <li> <a href="testclassroom.html" id="green">Green Room</a> </li>			    
+			    <li> <a href="#" id ="purple">Purple Room</a></li>
+			    <li><a id="orange">Orange Room </a></li>
+			    <li><a id="red">Red Room </a> </li>
+			    <li><a id="yellow">yellow Room</a></li>
+			 </ul>
+			</li>
+			   		 
+		</ul>
+    </div>
+</nav> 
+<header id="mainCourse" class="jumbotron">
+		<div class="container">
+			<div class="row row-header">
+				<div id="mainName" class="col-xs-12 col-sm-6 col-md-10">
+				 	<h2 id="welcomemsg"> welcome to our classrooms</h2>
+				 					 	
+				</div>
+			</div>
+		</div>
+</header>
+<div class="container">
+	<div class="row">	
+		<div class="col-xs-12 col-sm-10">
+				<h2 id="ageGroup"> Child Age Group: 2 years </h2>			
+		</div>
+	</div>
+</div>
+
+
+<div class="container">		
+	<div class="row">
+		<div id="teachInfo" class="col-xs-12 col-sm-10 media" alt="teacherName">		
+ 	 		<div class="media-left">    		
+      		<img id="teachImg" class="media-object" width="100px" src="C:\Users\Nayana\Pictures\IMG_0960.jpg" alt="...">
+      	</div>
+
+  		<div class="media-body">
+    		<h3 id ="teacherName"class="media-heading">Lead Teacher: <i>Jessie Marry</i> </h3>
+    		<h3 id="jrTeach">Associate Teacher:<i> Indira and kabita</i> </h3>
+   		</div>
+   	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-10">			
+			<h3 id ="desc" alt="classDescription"><h4> Classroom </div>
+		</div>	
+</div>
+
+<script type="text/javascript" src="classroomTemplet.js"></script>
+</body>
+</html>

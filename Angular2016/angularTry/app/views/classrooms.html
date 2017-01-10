@@ -1,0 +1,48 @@
+<main>
+		<div class="container">
+			<div class="row row-content" ng-controller="preschoolController as classRoomCtrl">
+				<div class="col-xs-12">
+					<ul class="nav nav-tabs" role="tablist">
+
+	   			 		<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(1)}"><a ng-click="classRoomCtrl.select(1)" href="#" aria-controls="blueroom" role="tab" data-toggle="tab">BlueRoom</a></li>
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(2)}" > <a ng-click="classRoomCtrl.select(2)" href="#" aria-controls="greenroom" role="tab" data-toggle="tab">Green Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(3)}"><a ng-click="classRoomCtrl.select(3)" href="#" aria-controls="purpleroom" role="tab" data-toggle="tab">Purple Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(4)}" > <a ng-click="classRoomCtrl.select(4)" href="#" aria-controls="orangeroom" role="tab" data-toggle="tab">Orange Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(5)}"><a ng-click="classRoomCtrl.select(5)" href="#" aria-controls="redroom" role="tab" data-toggle="tab">Red Room</a></li>
+
+	    				<li role="presentation" ng-class="{active:classRoomCtrl.isSelected(6)}" > <a ng-click="classRoomCtrl.select(6)" href="#" aria-controls="yellowroom" role="tab" data-toggle="tab">Yellow Room</a></li>
+
+	    			</ul>
+
+				<div class="class-content"> 
+
+					<ul class="media-list tab-pane fade in active">
+
+						<li class= "media" ng-repeat="classRoom in classRoomCtrl.classRooms|filter:classRoomCtrl.filtTxt">
+
+							<div class="media-left media-middle">
+							<figure>
+								<a href="#">							
+								<img class="media-object img-thumbnail" ng-src= {{classRoom.img}} alt="teacherImage" width="200px">
+								</a>
+								
+								<figcaption>Teacher's photo</figcaption>
+							</figure>	
+							</div>
+
+							<div class="media-body">
+
+								<h2 class= "media-heading">{{classRoom.listRoom}} Teacher: {{classRoom.teacherName}} </h2>
+								<p><span>{{classRoom.description}}</span></p>
+							</div>	
+						</li>
+					</ul>
+
+				</div>
+		</div>
+	</div>
+</main>
+

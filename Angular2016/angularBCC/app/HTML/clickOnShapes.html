@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="cApp"><!-- information of what TYPE of document to acept-->
+
+	<head>	<!--information about the document-->
+			<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+		
+		<!--title for document -->
+		<title>click on shape</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<!-- CSS -->
+	    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+	    <!-- bootstrap -->
+		<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+		<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">	  
+		<style>
+				#container{
+					width:200px;
+					height:200px;
+					background-color: pink;
+					display:none;
+				}
+		</style>
+		
+	</head>
+	<body>
+
+		<div>
+			<div id="container">				
+
+			</div>
+		</div>
+<script>
+
+	function makeBox(){		
+		var time=Math.random();
+			time=time*5000;
+		setTimeout(function(){
+					 document.getElementById("container").style.display="block";
+					},time);
+	}
+
+	document.getElementById("container").addEventListener("click",displayNone);
+	 function displayNone(){
+			this.style.display="none";
+			makeBox(); 
+		 }
+    makeBox();
+
+</script>
+
+
+	</body>
+</html>

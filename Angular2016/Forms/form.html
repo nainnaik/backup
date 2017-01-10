@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8"/>
+
+
+		<title>forms</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<style >
+		.row{
+			margin:0 auto;
+			padding:10px;
+			text-align: justify;
+		}
+		
+		
+	</style>
+
+
+
+
+
+
+	</head>
+	<body>
+
+		<div class="container-fluid"> 			
+		<div class="row">
+		<header> <h1>Online Registration</h1> </header>
+		<main>
+			<div class="col-xs-12 col-sm-6 col-md-8">
+										
+						<form class="form-inline clearfix" aria-label="registrationForm" role="form" id="registrationInfo" for ="formId">			
+						<fieldset>
+
+							<legend id="parentIn"> Parent's information </legend>
+							
+							<div class="form-group">
+								<label for="parentName"> <span>First name: </span>
+	 						 		<input type="text" name="firstname" required  placeholder= "parent's first name" aria-label="parentName" aria-required="true" >
+	 						 	</label>
+							</div>
+
+	 						<div class="form-group">
+								<label for="parentName"><span> LastName: </span>
+ 						 			<input type="text" id="firstname" placeholder= "parent's last name" aria-label="parentLastName">
+ 						 	 
+								</label>
+							</div>
+
+							<div class="form-group">
+								<label for="email"> <span> Email</span>
+									<input type="email" id="email" placeholder="abc@email.com" aria-label="email" autocomplete required="email" aria-required="true">
+								</label>
+							</div>
+
+							<div class="form-group">
+								<label for="homeAddress"><span> Street Address: </span>
+ 						 			<input aria-label="homeAddress" type="text" id="street1" placeholder= "street address">
+ 						 		</label>
+ 						 	</div>			 	 
+							<div class="form-group">
+								<label for="street"><span>street Address 2:</span>
+	 						 		<input aria-label="streetName" type="text" id="street2" placeholder= "street address">			 	 
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="state"><span> state:</span>
+	 								<input aria-label="state" type="text" name="state" placeholder= "state">	 						 					 	 
+								</label>
+							</div>
+
+							<div class="form-group">
+								<label for="zipCode"><span> zip: </span>
+	 						 			<input aria-label="zipCode" type="text" name="zipcode" placeholder= "zip code" pattern="[0-9]{5}"autocoplete required="zipCode">
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="PhoneNumber"><span> Contact Number: </span>
+		 						 		<input aria-label="contactNumber" type="number" name="phoneNumber" id="tel" placeholder= "contact Number" autocomplete required="tel" required> 						 					 	 
+								</label>
+							</div>
+							<div class="form-group">
+								<label for="PhoneNumber"> <span>Work Number: </span>
+		 						 		<input aria-label= "workNumber" type="number" name="phoneNumber" placeholder= "contact Number">
+								</label>
+							</div>						 
+						  						 
+						</fieldset>
+							
+					</form>
+
+			</div>
+
+			<div class="col-xs-12 col-sm-6 col-md-8">
+						
+						<form class="form-inline" role="form" id="childInfo" for ="infoChild">		
+			
+						<fieldset>
+
+							<legend> Child's information </legend>
+							<div class="form-group">
+								<label for="childName"> <span>First name: </span>
+	 						 		<input aria-label="childName" type="text" name="firstname" placeholder= "child's name" required aria-required="true">
+	 						 	</label>
+
+							</div>
+
+	 						<div class="form-group">
+
+								<label name="childLastName" for="lastName"><span> LastName: </span>
+ 						 			<input type="text" id="lastname" placeholder= "parent's last name" aria-label="lastname" required  aria-required="true">
+ 						 	 	</label>
+							</div>
+
+							<div class="form-group">
+								<label for="date of birth"> <span> Date of birth</span>
+									<input type="date" id="date" placeholder="child's Date of birth" aria-label="date of birth" >
+								</label>
+							</div>
+
+							<div class="form-group">
+								<label for="gender"><span> Gender </span> 
+ 						 			<data-list/>
+									<input aria-label="gender" list="gender">
+							  			<datalist id="gender">
+							    			<option aria-label="male" value="Male"/>
+							    			<option aria-label="female" value="Female"/>
+							    		</datalist>
+							    </label>						 		
+ 						 	</div>
+ 						</fieldset>
+ 					</form>	
+
+ 				</div>
+ 	
+ 			</div>
+		</main>
+			<div class="col-xs-12 col-sm-6 col-md-8">
+				<button type="button" class="btn btn-default btn-lg" aria="buttons">submit</button>
+			</div>
+		</div>
+		
+			
+		
+
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	</body>
+
+</html>

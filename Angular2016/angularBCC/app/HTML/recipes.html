@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RecipesApp">
+	<head>
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+			
+			<!--title for document -->
+			<title>test Angular</title>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<!--makes browsers render all elements more consistently and in line with modern standards-->
+			<link herf="http://necolas.github.com/normalize.css/">
+
+			<!-- CSS -->
+		    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+			<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+		 	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+
+		<title>Recipes </title>
+
+
+	</head>
+
+	<body>
+	
+
+    <header class="jumbotron">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-8">
+                    <h1>Ristorante con Fusion</h1>
+                    <p style="padding:40px;"></p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                </div>
+            </div>
+        </div>
+    </header>    <div class="container">
+        <!--ng init to include javascript object Dish and Array-->
+        <div class="row row-content" ng-controller="RecipeController">
+
+            <div class="col-xs-12">
+           
+                <ul class="nav nav-tabs" role="tablist">
+
+                     <li role="appitizer"  ng-class="{active:dishes.isSelected(1)}">
+                    <a ng-click="dishes.select(1)"  aria-controls ="Appetizer" role="tab">All menu </a></li>
+
+                     <li role="appitizer"  ng-class="{active:RecipeController.isSelected(2)}">
+                    <a ng-click="RecipeController.select(2)"  aria-controls ="Appetizer" role="tab">Appetizers </a></li>
+
+                    <li role="main"  ng-class="{active:menuCtrl.isSelected(3)}">
+                    <a ng-click="menuCtrl.select(3)"  aria-controls ="Mains" role="tab"> Mains</a></li>
+                   
+                     <li role="desserts"  ng-class="{active:menuCtrl.isSelected(4)}">
+                    <a ng-click="select(4)"  aria-controls ="Desserts" role="tab">Dessert</a></li>
+                   
+                   </ul>
+
+            <div class="tab-content">
+                <ul class="media-list tab-pane fade in active"> 
+                    <li class="media" ng-repeat="dish in dishes|filter:dishes.filtText"> <!--ng repeat work as for loop in dishes object array-->
+                        <div class="media-left media-middle">
+                            <a href="#">  <img class="media-object img-thumbnail" ng-src={{dish.image}} alt=""> </a>
+                        </div> 
+                        <div class="media-body">   
+                            <h2 class="media-heading">{{dish.name}}  <span class="label label-danger label-xs"> {{dish.label}} </span>  <span class="badge">{{dish.price| currency}}</span></h2>
+                            <p>{{dish.description}}</p>
+                             <!-- removed comment part of each of item : <p>Comment:{{dish.commnet}}</p>
+                            <p>Type your comment: <input type=text ng-model= "dish.commnet"</p> -->
+                    
+                        </div>
+                    </li>
+              </ul> 
+            </div>
+
+        </div>
+    </div>
+    
+
+
+	<script src="..\bower_components\angular\angular.min.js"></script>
+	<script src="..\app\js\recipeApp.js"></script>
+    <script src="..\app\controllers\RecipeController.js"></script>
+
+
+	</body>
+</html>

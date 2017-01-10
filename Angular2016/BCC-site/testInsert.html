@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US"><!-- information of what TYPE of document to expcet -->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>BCC</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap  and jquery-->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+	<script src="jquery-1.12.2.min.js"></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<style>
+	.row-header{
+		margin:0px auto;
+		padding :0px auto;
+
+	}
+
+	.row-content{
+
+	}
+	.row-footer{
+		background-color: #B5B9BA;
+		margin: 0px auto;
+		padding:20px 0px 20px 0px;
+
+	}
+	address{
+		font-size: 80%;
+		margin: 0px;
+		color: #0f0f0f;
+	}
+</style>
+	
+
+</head>
+<body>
+
+<button id="mbt">
+	 mybutton 
+</button> 
+<p id="blueroom"> </p>
+
+
+<script type="text/javascript">
+
+document.getElementById("mbt").addEventListener("click", displayDate);
+function displayDate (){
+
+	var roomName="<h3>blueroom</h3>";
+	document.getElementById("mbt").innerHTML= roomName;
+
+}
+
+
+
+
+
+	  	/*var blueroom=document.getELementById("blueroom");
+	  	var detail="<h3> blueroom </h3>".insert;
+
+        var tableM = document.getElementById("multidata").insertRow();
+        var name=tableM.insertCell(0);
+        var birthdate=tableM.insertCell(1);
+        var mobile=tableM.insertCell(2);
+        var groupname=tableM.insertCell(3);
+        var delData=tableM.insertCell(4);
+
+       	    name.innerHTML =document.getElementById("eventType").value;
+            birthdate.innerHTML =document.getElementById("eDate").value;
+            mobile.innerHTML= document.getElementById("mobile").value;
+            groupname.innerHTML= document.getElementById("gName").value;
+    		delData.innerHTML = "<input id ='del' type='button' value='Delete'>";*/
+      
+
+
+</script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+ </body>
+</html>

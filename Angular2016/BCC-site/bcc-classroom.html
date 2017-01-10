@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US"><!-- information of what TYPE of document to expcet -->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>classRoom</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap  and jquery-->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+	<!--script src="jquery-1.12.2.min.js"></script-->
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+<style>
+	.row-header{
+		margin:0 auto;
+		padding:0;
+	}
+
+	
+	.row-footer{
+		background-color: #B5B9BA;
+		margin: 0 auto;
+		padding:20 0 20 0;
+
+	}
+	address{
+		font-size: 80%;
+		margin: 0 auto;
+		color: #0f0f0f;
+	}
+
+
+</style>
+	
+
+</head>
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+        <ul class="nav navbar-nav">
+        	<li><a href="bcc.html"><span class="glyphicon glyphicon-education" aria-hidden="true"> </span> <span> Ballston Children Center </span></a></li>
+            <li class="active"><a href="bcc.html"><span class="glyphicon glyphicon-home" aria-hidden="true"> </span>Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="bcc-registration.html">Registration/Admissions</a></li>
+            
+            <li class="dropdown" id="roomlist">
+            	<a href="#" id="classroom" class="dropdown-toggle"  data-toggle="dropdown" data-target="mainRoom" role="button" aria-haspopup="true" aria-expanded="false">
+    			Classroom <span class="caret"></span> </a>
+			  <ul id="mainRoom" class="dropdown-menu "aria-labelledby= "classroom" >    
+			    <li class="main"><a  href="#" id="blue">Blue Room </a></li>		
+			    <li class="main"> <a  href="bcc-classroom.html" id="green">Green Room</a> </li>			    
+			    <li class="main"> <a href="bcc-classroom.html" id ="purple">Purple Room</a></li>
+			    <li><a id="orange">Orange Room </a></li>
+			    <li><a id="red">Red Room </a> </li>
+			    <li><a id="yellow">yellow Room</a></li>
+			  </ul>
+			</li>
+				 
+			<li class="dropdown"><a id="extraClass" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    			Extra Classes <span class="caret"></span></a>
+    			<ul class="dropdown-menu" aria-labelledby="extraClass">
+    				<li ><a href="#">Ballet</a></li>
+    				<li><a href="#">Spanish</a> </li>
+			    	<li><a href="#">Piano </a> </li>
+			    	<li><a href="#">Performing art</a></li>
+			    	<li><a href="#">Yoga</a></li>
+
+			    </ul>
+    		</li>
+			<li><a href="bcc-contact.html">Contact/Location</a></li>     
+		</ul>
+    </div>
+</nav> 
+
+<header id="mainCl" class="jumbotron">
+		<div class="container">
+			<div class="row row-header">
+				<div id="mainName" class="col-xs-12 col-sm-12">
+				 	<h1 id="name"></h1> 
+				 	
+				</div>
+			</div>
+		</div>
+</header>
+
+<div class="container">
+	
+	<div class="row">
+
+		<div class="col-xs-12 col-md-10" padding="0px"">		
+			
+			<p id="ageGroup"></p>	
+		
+		</div>
+	</div>
+	<div class="row">
+		<div id="teachInfo">
+
+			<h3 class="col-xs-12 col-sm-10" alt="teacherName"></h3>
+			<img alt="teacherImg"/	>
+		</div>
+		<div class="row">
+			
+			<p id ="desc" alt="classDescription"></p>
+		</div>
+	
+	</div>
+</div> 
+
+
+</script -->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="./js/bcc-classroom.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--information about the document-->
+        <meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+    
+    <!--title for document -->
+    <title> GAME</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--makes browsers render all elements more consistently and in line with modern standards-->
+    <link herf="http://necolas.github.com/normalize.css/">
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap -->
+    <link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+    <link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+    <style>body{
+        margin:0 auto;
+        }
+        p{color:blue;
+        }
+        </style>
+<head>
+<body>
+<div class="container">
+    <div class="jumbotoran"
+    <div class="row">       
+    <form action>
+            <h3>JavaScript  Program </h3>
+            <input type="text" id="txtbox" placeholder="Enter String" />
+            <input type="button" id="myBtn" value="check clone" />
+
+    </form>
+        <p id="msg" ></p>
+</div>      
+    </div>
+</div>
+<script>
+    document.getElementById("myBtn").addEventListener("click", uInput);
+    function uInput(){
+        var userInput= document.getElementById('txtbox').value;
+        
+            var copyarray= arrayClone(userInput);
+
+    }
+    function arrayClone(userInput){
+
+        //var array= [userInput];
+        var arrayCopy=[];
+        if(Array.isArray(userInput)){
+            arrayCopy=userInput.slice(0);
+
+         for(var i=0;i<arrayCopy.length;i++);{
+                arrayCopy[i]= arrayClone(arrayCopy[i]);
+         }
+            
+         document.getElementById('msg').innerHTML= arrayCopy;
+         console.log("this is clone");
+        } 
+         else if( typeof userInput === 'object' ) {
+            throw 'Cannot clone array containing an object!';
+        } 
+       // else {
+            //document.getElementById('msg').innerHTML=userInput;
+            // console.log("this is userinput");
+       // } 
+    }        
+    </script>
+</body>
+</html>

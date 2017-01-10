@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html><!-- information of what TYPE of document to acept-->
+	<head>	<!--information about the document-->
+			<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+		
+		<!--title for document -->
+		<title></title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<!-- CSS -->
+	    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+	    <!-- bootstrap --> 	
+
+	    <link href="..\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
+		<script src="..\bower_components\jquery\dist\jquery.js"> </script>	
+		<script src="..\bower_components\bootstrap\dist\js\bootstrap.min.js"> </script>
+		<style>
+			body{
+				background-color: #90C3D4;
+			}
+		</style>
+
+
+</head>
+	<body><!-- describes the visible page content-->
+			
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+	    			<div class="navbar-header">
+	      				<a class="navbar-brand" href="#">
+	        				<img alt="Mywebsite">
+	      				</a>
+	      		
+	      				 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNav">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span> 
+					      </button>
+	       			</div>
+
+	  			<div id="topNav" class="collapse navbar-collapse">  
+					<ul   class="nav navbar-nav">
+						<li class="active"> <a href="">link1</a></li>
+						<li><a href="">link2</a></li>
+					</ul>  	
+	      
+		      		<form class="navbar-form navbar-right " aria-label="sigin" role="form" id="sign" for ="formId">			
+								<fieldset>							
+									<div class="form-group">
+										<label for="login"> <span>Login: </span>
+			 						 		<input type="text" name="login" required  placeholder= "Enter login" aria-label="parentName" aria-required="true" >
+			 						 	</label>
+									</div>
+
+			 						<div class="form-group">
+										<label for="password"><span> Password: </span>
+		 						 			<input type="password" id="password" placeholder= "Enter Password" aria-label="password">
+		 						 	 
+										</label>
+									</div>
+									
+									<div class="form-group">
+										<label for="checkbox">
+		 						 			<input  type="checkbox" id="chkbox" aria-labled="checkbox" checked="true"> Keep me logged in 						 	 
+										</label>
+									</div>
+
+									<button type="submit" class="btn-group-xs btn-default" aria-lable="submitButton"> <span>Submit </span> </button> 
+								</fieldset>
+					</form>
+
+				</div> 
+			</div>
+				
+		</nav>
+		<main class="container">			
+				<section class="row">
+					<h1>Famous Cities<h1>
+
+					<article class="panel panel-default col-sm-4">
+						<h2 class="panel-heading">London</h2>
+						<p class="panel-body">London is the capital city of England. It is the most 	populous city in the United Kingdom,with a metropolitan area of over 13 	million inhabitants.
+						</p>
+					</article>
+
+					<article class="panel panel-default col-sm-4">
+						<h2 class="panel-heading">Paris</h2>
+						<p>Paris is the capital and most populous city of France.</p>
+					</article>
+
+					<article class="panel panel-default col-sm-4">
+						<h2 class="panel-heading">Tokyo</h2>
+						<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+							and the most populous metropolitan area in the world.
+						</p>
+					</article>
+				</section>			
+		</main>
+	
+	<main>
+			<nav class="navbar navbar-default" role="navigation">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span> 
+				</button>
+
+
+				<div class="container collapse navbar-collapse" id="navbar">
+					<ul id="topNav" class="nav navbar-nav">
+
+						<li><a> Sign In</a></li>
+						<li class="dropdown">
+							<a id="MyAct" data-target="actdrop"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> My Account <span class="caret"></span> </a> 
+							
+								<ul id="actdrop" class="dropdown-menu" aria-labelledby="myAct">
+									<li><a>profile </a></li>
+									<li><a>something</a></li>
+								</ul>
+						</li>
+
+
+						<li> <a>Store</a></li>
+						<li><a>Customer Service</a></li>
+					</ul>
+
+			
+				</div>
+			</nav>
+
+		</main>
+		<section>
+			<h1> macys <h1>
+		</section>
+
+
+		
+
+
+	</body>
+
+
+</html>

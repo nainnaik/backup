@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="recipeModule">
+<head>
+	<title>angularjs </title>
+	<meta charset="UTF-8">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+	.menu{
+		color: #546582;
+	}
+
+	</style>
+</head>
+<body ng-controller="restaurantController">
+
+	<div class="container" >
+	<div class=" jumbotron">
+		<button ng-click= "restaurantController.doSort('category')"> Menu By Category</button>
+		<button ng-click= "restaurantController.doSort('name')"> Menu By Name</button>
+		<button ng-click= "restaurantController.doSort('price')"> Menu By Price</button>
+	</div>
+		<div class="col-sm-8 menu" data-ng-repeat="rest in restaurantController.recipes|orderBy:restaurantController.sortBy:restaurantController.reverse">
+			
+			<h2>Category : {{rest.category}}</h2>
+			<h1>Name : {{rest.name}}</h1>
+			<p> Ingradients : {{rest.ingradients}} </p>
+			<p>Price : {{rest.price}}</p>			
+		</div>
+		
+	</div>
+<script> 
+angular.module("restaurantModule",[]);
+var restaurantController = function(restaurantService,$scope){
+
+			$scope.reverse=false;
+
+			$scope.recipes=[];
+			var recipes=[
+                    {
+                        name:'SPECIAL KABAB PLATTER',
+                        image:'png',
+                        category:'Appitizer',
+                        lable:'hot',
+                        price:'10.99',
+                        ingradients:'Shrimps, Lamb Seekh Kabab, and Chicken Tikka sauteed with onions, bell peppers, and fresh spices', 
+                        comment:'' 
+                    }, 
+
+                    {
+                        name:'PANEER MAKHANI',
+                        image:'png',
+                        category:'Mains',
+                        lable:'',
+                        price:'4.99',
+                        ingradients:' Homemade cottage cheese cooked with fresh tomato sauce, butter and mild Indian spices unique combination of indian and italian pizza', 
+                        comment:''  
+                    },
+
+                    {
+
+                        name:'VEGETABLE PAKORA',
+                        image:'../images/zucchipakoda.png',
+                        category:'Appitizer',
+                        lable:'New',
+                        price:'1.99',
+                        ingradients:'Mixed Vegetable fritters bound in a delicious chickpea flour batter', 
+                        comment:''   
+                    },
+                    
+                    {
+                        name:'GULAB JAMUN',
+                        image:'../images/elaicheesecake.png',
+                        category:'Dessert',
+                        lable:'sweet',
+                        price:'4.99',
+                        ingradients:'Dry milk and cottage cheese balls, deep in honey syrup and rose water', 
+                    }
+
+            	];     
+
+		$scope.getRecipes=function(){
+			console.log("called get recipes function");
+			return recipes;
+
+		};
+		
+
+			function init(){
+				$scope.recipes=restaurantService.getRecipes();
+			}
+
+			init();
+			
+            $scope.doSort=function(propName){                	
+            	$scope.sortBy=propName;
+            	$scope.reverse=!$scope.reverse;
+            };  
+
+    };
+    restaurantController.$inject=["restaurantService",'$scope'];
+    angular.module("recipeModule").controller("RestaurantController",restaurantController);
+
+
+</script>
+
+
+<script src="../practiceAngular/script/angular.min.js"></script>
+<script src="../practiceAngular/script/angular-route.min.js"></script>
+
+
+
+</body>
+</html>

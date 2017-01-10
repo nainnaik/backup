@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <title>Shopping List Check Off</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+<body>
+    {{5+1}}
+  <div class="container">
+  <h1>Shopping List Check Off</h1>
+
+  <div class="row">
+
+    <!-- To Buy List -->
+    <div class="col-md-6" ng-controller>
+     <h2>To Buy:</h2>
+     <ul>
+       <li ng-repeat="item in buyList">Buy  <button> Bought</button>
+         </li>
+         
+     </ul>
+     <div class="emptyMessage">Everything is bought!</div>
+    </div>
+
+    <!-- Already Bought List -->
+    <div class="col-md-6">
+
+     <h2>Already Bought:</h2>
+     <ul>
+       <li>Bought 10 cookies</li>
+     </ul>
+     <div class="emptyMessage">Nothing bought yet.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+var buyItemList= [
+      {
+        name:"itune",
+        quantity:"1",
+      },
+      {
+        name:"iphone",
+        quantity:"1",
+
+      },
+      {
+        name:"mac",
+        quantity:"2",
+
+      },
+      {
+        name:"ipod",
+        quantity:"4",
+
+      },
+      {
+        name:"SmartWatch",
+        quantity:"2",
+
+      }
+    ];
+
+    var list=['candy','cookies','bread','icecream']
+
+    function removelist(list){
+    var removedList=list.splice(list,1);
+    console.log(removedList);
+    }removelist(list);
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

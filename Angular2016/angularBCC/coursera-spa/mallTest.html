@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListCheckOff">
+<head>
+	<title></title>
+</head>
+<body>
+
+<div ng-controller="ToBuyShoppingController">
+	<div>
+		<h2>To Buy:</h2>
+	     <ul>
+	       <li ng-repeat="item in buyItemList">Buy {{item.quantity}} of  {{item.name}}
+	         <button ng-click="addToBoughtlist()"> Bought</button>
+	       </li>
+	       
+	     </ul>     
+    </div>
+    <div ng-controller="AlreadyBoughtShoppingController">
+    	
+
+
+
+    </div>
+
+</div>
+
+<script src="..\coursera-spa\angular.min.js"></script>
+<script src="..\coursera-spa\mallTest.js"></script>
+
+
+
+</body>
+</html>

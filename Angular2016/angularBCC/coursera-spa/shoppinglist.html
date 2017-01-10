@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListApp">
+<head>
+	<title>Test Shopping list</title>
+</head>
+
+<body>
+{{5+5}}
+<div>
+	<div ng-controller="ShoppingListAddController as itemAdder">
+		<input type="text" ng-model="itemAdder.itemName" placeholder="item name">
+		<input type="text" ng-model="itemAdder.itemQuantity" placeholder="item quantity">
+		<button ng-click="itemAdder.addItem()">Add to shopping list</button>
+
+		
+	</div>
+	<div ng-controller="ShoppingListAddController as showList">
+		<ol>
+			<li ng-repeat="item in showlist.items">
+				{{item.quantity}} of {{item.name}}
+			</li>
+		</ol>		
+	</div>
+</div>
+
+
+<script src="..\coursera-spa\angular.min.js"></script>
+<script src="..\coursera-spa\shoppinglistApp.js"></script>
+
+
+</body>
+</html>

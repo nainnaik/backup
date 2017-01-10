@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="preschoolApp" > <!-- information of what TYPE of document to expcet -->
+	<head>	<!--information about the document-->
+			<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+		
+		<!--title for document -->
+		<title>Preschool</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+		<!--bootstrap and jquery-->
+		<link href="..\bower_components\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
+	 	<link href="..\bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">	
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse " role="navigation">
+			<div id="navBar" class="container">
+		        <ul id="topNav"class="nav navbar-nav">
+		        	
+		        	<li id="indHtml"><a href="bccIndex.html"><span class="glyphicon glyphicon-education" aria-hidden="true"> </span> <span> Preschool Children Center </span></a></li>
+		            
+		            <li li="homeHtml"class="active"><a href=".\bccIndex.html"><span class="glyphicon glyphicon-home" > </span>Home</a></li>
+
+		            <li id="abtHtml"><a href="#">About</a></li>
+		            
+		            <li id="rgsHtml"><a href="">Registration/Admissions</a></li>
+
+		            <li id="roomlist"> <a href=".\bcc-classRoom.html" > Classrooms </a></li>
+						
+					<li class="dropdown"><a id="extraClass" data-target="dropdown-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		    			Extra Classes <span class="caret"></span></a>
+		    			<ul class="dropdown-menu" aria-labelledby="extraClass">
+		    				<li><a href="#">Ballet</a></li>
+		    				<li><a href="#">Spanish</a> </li>
+					    	<li><a href="#">Piano </a> </li>
+					    	<li><a href="#">Performing art</a></li>
+					    	<li><a href="#">Yoga</a></li>
+					    </ul>
+		    		</li>
+					<li><a href=".\bcc-contact.html">Contact/Location</a></li>     
+				</ul>
+		    </div>
+		</nav> 
+			<div ng-view></div>
+
+
+		<footer>
+		<div class="container">
+			<div class="row row-footer">
+				<div class="col-sm-2">
+					<h5>Links</h5>
+					<ul class="list-unstyled">
+						<li><a herf="#">Ballston Children Center</a></li>
+			            <li class="active"><a href="#">Home</a></li>
+			            <li><a href="#">About</a></li>
+			            <li><a href="#">Registration/Admissions</a></li>
+			            <li><a href="#">Contact</a></li>
+			            <li><a href="#">Loction/Direction</a></li>
+			        </ul>
+				</div>
+
+
+			
+		<script src= "..\bower_components\angular\angular.min.js"></script>
+		<script src ="..\bower_components\angular-route\angular-route.min.js"></script>
+		
+			<!--controllers-->
+		<script src=".\jsPreschool\app.js"></script>
+		<script src=".\controllers\preschoolController.js"></script>		
+		<script src=".\preschoolServices\preschoolFactory.js"></script>
+		
+	</body>
+</html>

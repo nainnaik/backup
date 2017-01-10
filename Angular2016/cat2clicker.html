@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html><!-- information of what TYPE of document to acept-->
+<head>	<!--information about the document-->
+		<meta charset="UTF-8"><!-- Specify the character encoding for the HTML document-->
+	
+	<!--title for document -->
+	<title>2 cat clicker GAME</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--makes browsers render all elements more consistently and in line with modern standards-->
+	<link herf="http://necolas.github.com/normalize.css/">
+
+	<!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
+
+    <!-- bootstrap -->
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.css" rel="stylesheet">
+	<link href="C:\Users\Nayana\WebDevlopment\bootstrap-3.3.4-dist\css\bootstrap.min.css" rel="stylesheet">
+  
+  </style>
+	
+</head>
+<body><!-- describes the visible page content-->
+
+<div class="col-10-md" id="catImg1">
+
+
+<img src="C:\Users\Nayana\Documents\Angular2016\img\kitten.jpg">
+
+<p id="clickCount"> </p>
+</div>
+
+
+<div class="col-10-md">
+<input list="cats" name="cats">
+   <datalist id="cats">
+    <option value="gray">gray
+    <option value="brown">brown
+    <option value="pink">pink
+  </datalist>
+  <input type="submit">
+</div>
+
+
+  <script>
+  (function(){
+       document.getElementById("catImg1").addEventListener("click",function(){ kitty1click();},false);
+
+      	var clicks = 0;
+      	function kitty1click(){    	
+    		clicks=clicks+1;
+
+    		document.getElementById("clickCount").innerHTML ="how many time you click :" + clicks;}
+
+    }());
+    	
+   </script>   
+<script>
+ var cats={ name:"brown";
+            img:"C:\Users\Nayana\Documents\Angular2016\img\kitten.jpg";
+            count:0;
+         }
+         { name:"pink";
+            img:"C:\Users\Nayana\Documents\Angular2016\img\kitten.jpg";
+            count:0;
+         }
+         
+
+</script>    
+
+</body>
+</html>

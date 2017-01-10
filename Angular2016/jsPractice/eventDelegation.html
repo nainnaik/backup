@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8"/>
+
+
+		<title>forms</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--makes browsers render all elements more consistently and in line with modern standards-->
+		<link herf="http://necolas.github.com/normalize.css/">
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</head>
+	<body>
+
+	<header><h1>Get access to li element texNode</h1></header>
+	<nav class="navbar" role="navigation">
+	  <div id="navBar" class="container">
+
+
+
+        <ul id="topNav" class="nav navbar-nav navbar-inverse"> <span> navigation </span>
+
+	        <li><a> try</a> </li>
+			<li> <a> event</a> </li>
+			<li class="dropdown"> <a data-toggle="dropdown" id="listroom"> Dropdown</a>
+				
+				<ul id="rooms" class="dropdown-menu">
+				    <li>blue</li>
+				    <li>green</li>
+				    <li>orange</li>
+				    <li>purple</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</nav>
+	<div>
+		<h1 id="r"></h1>
+		<p id="d"></p>
+		
+	</div>
+		
+<script>
+document.getElementById('rooms').addEventListener('click', function(e){
+	
+    if(e.target.nodeName.toLowerCase() =="li"){ 	
+
+        console.log("room li elements clicked");
+        
+       console.log(e.target);
+      
+       document.getElementById('r').innerHTML="ClassRoomMap";
+
+    }
+
+    
+
+},false);
+
+</script>
+</body>
+</html>

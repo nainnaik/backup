@@ -1,0 +1,21 @@
+{
+  "name": "mytestanguler",
+  "description": "how to build a web page using angulerjs",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "reminder",
+    "angulerjs"
+  ],
+  "authors": [
+    "nain"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular-route": "^1.5.3"
+  }
+}
